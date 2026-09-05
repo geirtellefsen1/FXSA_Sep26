@@ -13,6 +13,8 @@ Master plan, Phase 1 foundation, and the Zoho migration tooling for a multi-tena
 | `docs/04-COWORK-EXPORT-RUNBOOK.md` | For Claude CoWork: how to export what it holds (CSV contracts A and B) and load it |
 | `docs/05-UX-PHASE-1.md` | The operator-console prototype mapped to Phase 1 data; tenant switcher; Migration screen |
 | `docs/06-DECISIONS.md` | Decisions with rejected alternatives and confidence; open questions by phase |
+| `docs/07-SPRINTS.md` | Phase 1 Sprint 1 and Sprint 2 cut into day-sized Claude Code sessions, each with a ready-to-paste prompt |
+| `docs/sprints/` | One log per completed day: shipped, slipped, decisions, carried over |
 | `docs/source/` | The Zoho backup analysis this plan is built on |
 | `db/migrations/` | `0001` tenancy · `0002` core (memo-derived, RLS-safe, tenant-scoped keys) · `0003` legacy (Zoho) · `0004` import pipeline · `0005` RLS |
 | `db/seed/` | Flexistore org + tenants (fxsa, fxno, fxfi) + agent capability catalogue |
