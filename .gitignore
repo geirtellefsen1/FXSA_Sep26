@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+*.egg-info/
+tools/zoho-import/tests/fixture/
+.DS_Store
