@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=1320" />
+<title>Flexistore — Operator console</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="tokens.css" />
+<link rel="icon" type="image/svg+xml" href="fx-logo.svg" />
+<meta name="ext-resource-dependency" content="fx-logo.svg" data-resource-id="fxLogo" />
+
+<template id="__bundler_thumbnail" data-bg-color="#0F2A43">
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" fill="#0F2A43"/><rect x="36" y="34" width="48" height="18" rx="3" fill="#F26522"/><rect x="36" y="58" width="48" height="18" rx="3" fill="#F5F3EF"/><rect x="36" y="82" width="48" height="4" rx="2" fill="#F5F3EF" opacity=".5"/></svg>
+</template>
+
+<style>
+  @keyframes fade-in { from { opacity: 0 } to { opacity: 1 } }
+  @keyframes slide-up { from { transform: translateY(8px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }
+</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="icons.jsx"></script>
+<script type="text/babel" src="components.jsx"></script>
+<script type="text/babel" src="data.jsx"></script>
+<script type="text/babel" src="data-hardware.jsx"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="shell.jsx"></script>
+<script type="text/babel" src="screens/cockpit.jsx"></script>
+<script type="text/babel" src="screens/inbox.jsx"></script>
+<script type="text/babel" src="screens/customers.jsx"></script>
+<script type="text/babel" src="screens/corporate.jsx"></script>
+<script type="text/babel" src="screens/leads.jsx"></script>
+<script type="text/babel" src="screens/ai.jsx"></script>
+<script type="text/babel" src="screens/devices.jsx"></script>
+<script type="text/babel" src="screens/facilities.jsx"></script>
+<script type="text/babel" src="screens/new-facility.jsx"></script>
+<script type="text/babel" src="screens/billing.jsx"></script>
+<script type="text/babel" src="screens/arrears.jsx"></script>
+<script type="text/babel" src="screens/reports.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+
+</body>
+</html>

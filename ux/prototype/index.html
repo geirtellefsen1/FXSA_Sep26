@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=1320" />
+<title>Flexistore PMS — Operator console</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Runtime vendored (vendor/) so the prototype opens from disk without a CDN. -->
+<link rel="stylesheet" href="tokens.css" />
+<link rel="icon" type="image/svg+xml" href="fx-logo.svg" />
+
+<style>
+  @keyframes fade-in { from { opacity: 0 } to { opacity: 1 } }
+  @keyframes slide-up { from { transform: translateY(8px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }
+</style>
+
+<script src="vendor/react.production.min.js"></script>
+<script src="vendor/react-dom.production.min.js"></script>
+<script src="vendor/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="icons.jsx"></script>
+<script type="text/babel" src="tenants.jsx"></script>
+<script type="text/babel" src="components.jsx"></script>
+<script type="text/babel" src="data.jsx"></script>
+<script type="text/babel" src="data-hardware.jsx"></script>
+<script type="text/babel" src="shell.jsx"></script>
+<script type="text/babel" src="screens/cockpit.jsx"></script>
+<script type="text/babel" src="screens/inbox.jsx"></script>
+<script type="text/babel" src="screens/customers.jsx"></script>
+<script type="text/babel" src="screens/corporate.jsx"></script>
+<script type="text/babel" src="screens/leads.jsx"></script>
+<script type="text/babel" src="screens/ai.jsx"></script>
+<script type="text/babel" src="screens/devices.jsx"></script>
+<script type="text/babel" src="screens/facilities.jsx"></script>
+<script type="text/babel" src="screens/new-facility.jsx"></script>
+<script type="text/babel" src="screens/billing.jsx"></script>
+<script type="text/babel" src="screens/arrears.jsx"></script>
+<script type="text/babel" src="screens/reports.jsx"></script>
+<script type="text/babel" src="screens/migration.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+
+</body>
+</html>
