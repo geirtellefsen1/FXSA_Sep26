@@ -1,0 +1,20 @@
+[project]
+name = "zoho-import"
+version = "0.1.0"
+description = "Zoho CRM backup → Flexistore PMS canonical schema importer"
+requires-python = ">=3.10"
+dependencies = ["psycopg[binary]>=3.1"]
+
+[project.scripts]
+zoho-import = "zoho_import.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["zoho_import*"]
+
+[tool.setuptools.package-data]
+zoho_import = ["transforms/*.sql"]
