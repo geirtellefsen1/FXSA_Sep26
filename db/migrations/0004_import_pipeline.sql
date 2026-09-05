@@ -188,6 +188,7 @@ begin
   return null;
 end $$;
 
--- Text→uuid v5-style deterministic id from a namespace + string (so re-runs produce the same ids)
+-- Deterministic uuid from a namespace + string (so re-runs produce the same ids). Shaped like RFC 4122
+-- version 5 (version nibble '5', variant '8') so strict validators accept it.
 create or replace function import.stable_uuid(ns text, key text) returns uuid language sql immutable as $$
-  select md5(ns || ':' || key)::uuid $$;
+  select (substr(h, 1, 12) || '5' || substr(h, 14, 3) || '8' || substr(h, 18, 15))::uuid from md5(ns || ':' || key) as h $$;

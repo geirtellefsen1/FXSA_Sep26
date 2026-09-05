@@ -32,5 +32,5 @@ join tenants t on t.org_id = u.org_id and (
     or (t.slug = 'fxsa' and zu.role_name ilike '%south africa%')
     or (t.slug = 'fxno' and zu.role_name ilike '%norway%')
     or (t.slug = 'fxfi' and zu.role_name ilike '%finland%')
-    or (zu.role_name is null or zu.role_name not ilike any (array['%south africa%','%norway%','%finland%'])))
+    or (zu.role_name is null or not (zu.role_name ilike any (array['%south africa%','%norway%','%finland%']))))
 on conflict (tenant_id, user_id) do update set role = excluded.role;

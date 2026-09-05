@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: fx
+      POSTGRES_PASSWORD: fx
+      POSTGRES_DB: fxpms
+    ports:
+      - "5432:5432"
+    volumes:
+      - fxpms-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fx -d fxpms"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+volumes:
+  fxpms-db:
