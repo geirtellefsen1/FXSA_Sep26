@@ -13,6 +13,11 @@ export class Db {
     this.pool = new Pool({ connectionString, max: 10 });
     // bigint (int8) → number is unsafe above 2^53; money in minor units fits, row counts fit. Keep strings for safety.
     pg.types.setTypeParser(20, (v) => v);
+    // timestamptz → ISO UTC string directly, so every route returns times the same way without a conversion step.
+    pg.types.setTypeParser(1184, (v) => (v === null ? null : new Date(v).toISOString()));
+    // date → keep the raw 'YYYY-MM-DD' text. A date has no timezone; converting it to a JS Date and back risks an
+    // off-by-one-day bug depending on the server's local timezone. Pure dates stay dates.
+    pg.types.setTypeParser(1082, (v) => v);
   }
 
   /**

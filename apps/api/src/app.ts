@@ -6,6 +6,15 @@ import { Db } from './db.js';
 import { scopePlugin } from './plugins/scope.js';
 import { healthRoutes } from './routes/health.js';
 import { meRoutes } from './routes/me.js';
+import { cockpitRoutes } from './routes/cockpit.js';
+import { sitesRoutes } from './routes/sites.js';
+import { customersRoutes } from './routes/customers.js';
+import { subscriptionsRoutes } from './routes/subscriptions.js';
+import { paymentsRoutes } from './routes/payments.js';
+import { leadsRoutes } from './routes/leads.js';
+import { arrearsRoutes } from './routes/arrears.js';
+import { devicesRoutes } from './routes/devices.js';
+import { importRoutes } from './routes/import.js';
 
 export type BuildOptions = { databaseUrl: string; devAuth: boolean; logger?: boolean };
 
@@ -28,6 +37,15 @@ export async function buildApp(opts: BuildOptions) {
   await app.register(scopePlugin, { db, devAuth: opts.devAuth });
   await app.register(healthRoutes, { db });
   await app.register(meRoutes);
+  await app.register(cockpitRoutes);
+  await app.register(sitesRoutes);
+  await app.register(customersRoutes);
+  await app.register(subscriptionsRoutes);
+  await app.register(paymentsRoutes);
+  await app.register(leadsRoutes);
+  await app.register(arrearsRoutes);
+  await app.register(devicesRoutes);
+  await app.register(importRoutes);
   app.get('/api/openapi.json', async () => app.swagger());
 
   app.addHook('onClose', async () => db.close());
