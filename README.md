@@ -14,6 +14,7 @@ Master plan, Phase 1 foundation, and the Zoho migration tooling for a multi-tena
 | `docs/05-UX-PHASE-1.md` | The operator-console prototype mapped to Phase 1 data; tenant switcher; Migration screen |
 | `docs/06-DECISIONS.md` | Decisions with rejected alternatives and confidence; open questions by phase |
 | `docs/07-SPRINTS.md` | Phase 1 Sprint 1 and Sprint 2 cut into day-sized Claude Code sessions, each with a ready-to-paste prompt |
+| `docs/08-SPRINT-ROADMAP.md` | Sprints 3–13 (Phases 1 close through 6): day-by-day plan, confidence rating and blockers per sprint |
 | `docs/sprints/` | One log per completed day: shipped, slipped, decisions, carried over |
 | `docs/source/` | The Zoho backup analysis this plan is built on |
 | `db/migrations/` | `0001` tenancy · `0002` core (memo-derived, RLS-safe, tenant-scoped keys) · `0003` legacy (Zoho) · `0004` import pipeline · `0005` RLS |
