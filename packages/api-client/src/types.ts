@@ -10,6 +10,23 @@ export type SiteRef = { id: string; name: string; short_code: string };
 export type UnitRef = { id: string; number: string; display_name: string | null };
 export type Page<T> = { items: T[]; next_cursor: string | null };
 
+export type StaffRole = 'super_admin' | 'admin' | 'manager' | 'operator' | 'viewer';
+export type Membership = {
+  tenant_id: string;
+  slug: string;
+  name: string;
+  role: StaffRole;
+  currency: string;
+  locale: string;
+  timezone: string;
+  country: string;
+};
+export type Me = {
+  user: { id: string; email: string; full_name: string | null; is_org_admin: boolean };
+  memberships: Membership[];
+  scope: { all: boolean; tenant_ids: string[]; selected: Membership | null };
+};
+
 export type Cockpit = {
   tenants: {
     tenant_id: string;

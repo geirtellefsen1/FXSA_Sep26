@@ -1,6 +1,6 @@
 import type {
   ArrearsItem, Cockpit, Customer360, CustomerListItem, DeviceNode, DeviceSiteSummary, ImportCheck, ImportModule,
-  ImportRun, LeadListItem, MarketSourceRow, Page, PaymentListItem, SiteListItem, SubscriptionListItem, TimelineRow,
+  ImportRun, LeadListItem, MarketSourceRow, Me, Page, PaymentListItem, SiteListItem, SubscriptionListItem, TimelineRow,
   UnitListItem,
 } from './types.js';
 
@@ -43,7 +43,7 @@ export class FxApiClient {
   }
 
   me() {
-    return this.get<{ user: { id: string; email: string; full_name: string | null; is_org_admin: boolean }; memberships: unknown[]; scope: unknown }>('/api/me');
+    return this.get<Me>('/api/me');
   }
 
   cockpit() {

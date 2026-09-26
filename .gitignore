@@ -6,3 +6,5 @@ tools/zoho-import/tests/fixture/
 node_modules/
 dist/
 .env
+test-results/
+playwright-report/
